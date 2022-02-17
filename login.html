@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicep-width
+    , height=device-height, minimum-scale=1.0,
+    maximum-scale=1.0, initial-scale=1.0">
+    <title>로그인</title>
+
+    <style type="text/css">
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            padding-top: 180px;
+            font-weight: bold;
+        }
+        form{
+            position: absolute;
+            padding: 20px;
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lavender;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+        .input-box{
+            position: relative;
+            margin: 10px 0;
+        }
+        .input-box > input{
+            background: transparent;
+            border: none;
+            border-bottom: solid 1px #ccc;
+            padding: 20px, 0px, 5px, 0px;
+            font-size: 14px;
+            width: 100%;
+        }
+        input::placeholder{
+            color: transparent;
+        }
+        input:placeholder-shown + label{
+            color: #aaa;
+            font-size: 14pt;
+            top: 15px;
+        }
+        input:focus + label, label{
+            color: darksalmon;
+            font-size: 10pt;
+            pointer-events: auto;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+        }
+        input:focus, input:not(placeholder-shown){
+            border-bottom: solid 1px darksalmon;
+            outline: none;
+        }
+        #btn_log{
+                border: solid lightsalmon;
+                background-color: lightsalmon;
+                color: white;
+                border-radius: 5px;}
+        #btn_log:hover{
+                color: darkviolet; 
+                background-color: lavender; 
+                border: solid darkviolet;}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>Login</h2>
+    </header>
+    
+
+<form action = "loginProc.php" method ="post" >
+
+    <div class="input-box">
+            [Id]<input id="user_id" type ="text" name ="user_id" placeholder="아이디" style="text-align: center;"><br>
+            
+    </div>
+
+    <div class="input-box">
+            [Password]<input id="pwd" type = "password" name="pwd" placeholder= "비밀번호" style="text-align: center;"><br>
+            
+    </div>
+
+    <center><button id="btn_log" type = "submit"> 로그인 </button></center>
+
+</form>
+
+
+</body>
+</html>

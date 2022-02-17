@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>메인 화면</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.navbar{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #f2e2c6;
+			padding: 3px 10px;
+		}
+		.navbar-menu{
+			display: flex;
+			list-style: none;
+			padding-left: 0;
+		}
+		.navbar-menu li{
+			padding: 3px 12px;
+			font-size: 20px;
+		}
+		.navbar-menu li a{
+			font-weight: bold;
+			color: #15400e;
+		}
+		.navbar-menu li:hover{
+			background-color: #fbdea2;
+			border-radius: 5px;
+		}
+		.navbar-menu li:hover a{
+			color: #88968d;
+		}
+		.navbar-login{
+			display: flex;
+			list-style: none;
+			padding-left: 0;
+		}
+		.navbar-login li{
+			padding: 3px 12px;
+		}
+		.navbar-login li a{
+			color: #15400e;
+		}
+		.navbar-login li:hover{
+			background-color: #fbdea2;
+			border-radius: 5px;
+		}
+		.navbar-login li:hover a{
+			color: #82b695;
+			font-weight: bold;
+		}
+
+
+	</style>
+</head>
+<body>
+	<nav class="navbar">		
+		<div class="navbar-logo">
+			<img src="logo.png" width="200">
+		</div>
+
+		<ul class="navbar-menu">
+			<li><a href="main.html">Home</a></li>
+			<li><a href="">Study</a></li>
+			<li><a href="schedule.html">Schedule</a></li>
+			<li><a href="">Grade point</a></li>
+		</ul>
+
+		<ul class="navbar-login">
+			<li><a href="login.html">로그인</a></li>
+			<li><a href="join.html">회원가입</a></li>
+		</ul>
+	</nav>
+
+</body>
+</html>
