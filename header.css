@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: #fff3e6;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe4cc;
+    padding: 3px 10px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.navbar-menu li{
+    padding: 3px 12px;
+    font-size: 23px;
+}
+.navbar-menu li a{
+    font-weight: bold;
+    color: #15400e;
+}
+.navbar-menu li:hover{
+    background-color: #15400e;
+    border-radius: 5px;
+}
+.navbar-menu li:hover a{
+    color: white;
+}
+.navbar-login{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.navbar-login li{
+    padding: 3px 12px;
+    font-size: 17px;
+}
+.navbar-login li a{
+    font-weight: 550;
+    color: #15400e;
+}
+.navbar-login li:hover{
+    background-color: #15400e;
+    border-radius: 5px;
+}
+.navbar-login li:hover a{
+    color: white;
+    font-weight: bold;
+}
+.custom-shape-divider-top-1646754492 {
+    position: absolute;
+
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1646754492 svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 64px;
+}
+
+.custom-shape-divider-top-1646754492 .shape-fill {
+    fill: #FFE4CC;
+}
