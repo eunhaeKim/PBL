@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>스터디</title>
+    <link href="header.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+	  
+      var data;
+      var options;
+      var chart;
+    function drawChart() {
+          data = new google.visualization.DataTable();
+          data.addColumn('string');
+          data.addColumn('number',String(document.getElementById('name').inputMode));
+          
+          
+          options = {
+                chart: {
+                  title: '성적그래프',
+                  is3D : true,
+                  subtitle: '',
+                }
+               
+              }
+
+         chart = new google.charts.Bar(document.getElementById('columnchart'));
+
+              chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    function adddataC(){
+      data.addColumn([
+
+      ]);
+    
+    }  
+    function addData(){
+  
+        data.addRow([
+            String(document.getElementById('today').value),
+            Number(document.getElementById('sendInput').value),
+        
+          ]);
+
+        chart.draw(data, options)
+        
+      }
+
+    function removeData() {
+            data.removeRow(0);
+            chart.draw(data, options)
+      }
+    </script>
+
+  <style>
+     fieldset {
+        background-color: bisque;
+        text-align:center;
+        width: 600px;
+        height: 220px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 20px;
+      }
+      button{
+        margin-left: 16px;
+        margin-right: 16px;
+        border: solid #15400e;
+        background-color: #15400e;
+        color: white;
+        border-radius: 5px;
+        }
+      button:hover{color: #15400e; background-color: #fbdea2; border: solid #15400e;}
+  </style>
+  </head>
+
+  <body>
+    <!--header-->
+    <nav class="navbar">		
+      <div class="navbar-logo">
+        <a href="main.html"><img src="logo.png" width="200"/></a>
+      </div>
+
+      <ul class="navbar-menu">
+        <li><a href="main.html">Home</a></li>
+        <li><a href="study.html">Study</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="chart.html">Grade point</a></li>
+      </ul>
+
+      <ul class="navbar-login">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+      </ul>
+    </nav>
+
+    <h2 style="text-align: center;">성적그래프</h2>
+    <hr>    
+    <div id="columnchart" style="width: 650px; height: 310px; position: relative; left: 50%; transform: translate(-50%); margin-top: 20px;"></div>
+
+    <fieldset>
+      <div style="line-height:125%;">
+      날짜<br>
+      <input id="today" type="date"><br>
+      <br>
+      과목이름<br>
+      <input id="name" type="text"><br>
+      <br>
+      점수<br>
+      <input id="sendInput" type="text"><br>
+      <br>
+      <button onclick="addData();">추가</button> 
+      <button onclick="removeData();">제거</button>
+    </div>
+    </fieldset>
+    
+  </body>
+</html>
